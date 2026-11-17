@@ -4,7 +4,7 @@ Kit de skills Claude qui analyse l'historique COROS, propose des séances de cou
 
 ## Principe
 
-- **Un seul skill installé** : `coach/`, le chargeur. Il lit les autres skills ici, à l'étiquette `Stable`. On fait évoluer le kit sans rien réinstaller.
+- **Un seul skill installé** : `coach/`, le chargeur. Il lit les autres skills ici, sur la branche `main`. On fait évoluer le kit sans rien réinstaller.
 - **Une conversation = une phase.** Le contexte vit hors de la conversation : un fichier `contexte-coach.md` que l'athlète colle au début et que Claude rend mis à jour à la fin.
 - **COROS** est lu par son connecteur officiel (`https://mcp.coros.com/mcp`).
 
@@ -42,8 +42,4 @@ VERSION
 
 ## Publier une version (mainteneur)
 
-Modifier, incrémenter `VERSION`, puis déplacer l'étiquette :
-
-```
-git tag -f Stable && git push -f origin Stable
-```
+Tout ce qui est poussé sur `main` est lu par l'athlète dès sa prochaine conversation. Incrémenter `VERSION` à chaque changement de comportement.
